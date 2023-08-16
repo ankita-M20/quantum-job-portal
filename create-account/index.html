@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="./assets/walk-in-asserts/Zeus-LMS-logo.svg"
+          alt="logo"
+          class="logo"
+        />
+      </div>
+      <div class="header-icons">
+        <div class="profile-icon">U</div>
+      </div>
+    </header>
+
+    <div class="sub-header">
+      <div class="back-arrow">
+        <img
+          src="./assets/icons/back.svg"
+          alt="Previous"
+          id="prevBtn"
+          onclick="prevSection()"
+        />
+      </div>
+      <div class="sub-head-title">Create An Account</div>
+      <div class="sub-head-btns">
+        <div class="button">
+          <button><span id="cancelBtn">Cancel</span></button>
+        </div>
+        <div class="button">
+          <button id="createBtn" onclick="createAccount()" disabled>
+            <span>Create</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--<img src="./assets/extra-assert/pencil.png">-->
+    <div class="head-option">
+      <div class="personal" id="personal-section">
+        <div class="round-icon active-icon">
+          <!-- Round div with background color -->
+          <div class="pencil-icon">1</div>
+        </div>
+        <div class="label">
+          <a href="#personalSection" class="nav-link">Personal Information</a>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="qualification" id="qualification-section">
+        <div class="round-icon">
+          <!-- Round div with background color -->
+          <div class="pencil-icon">2</div>
+        </div>
+        <div class="label">
+          <a href="#qualificationSection" class="nav-link">Qualification</a>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="review" id="review-section">
+        <div class="round-icon">
+          <!-- Round div with background color -->
+          <div class="pencil-icon">3</div>
+        </div>
+        <div class="label">
+          <a href="#reviewSection" class="nav-link">Review and Proceed</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="personalSection" class="section">
+      <div class="card">
+        <div class="sub-card">
+          <div class="personal-details">
+            <form id="personalForm">
+              <div class="details">
+                <p>First Name*</p>
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="details">
+                <p>Last Name*</p>
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <div class="details">
+                <p>Email*</p>
+                <input type="text" id="email" placeholder="Email" required />
+              </div>
+              <div class="details">
+                <p>Phone Number*</p>
+                <div class="phone-input">
+                  <div class="country-code+">+</div>
+                  <input
+                    type="text"
+                    id="country-code"
+                    placeholder="91"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="phone-number"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="details">
+                <div class="file-upload">
+                  <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    class="file-input"
+                    onchange="displayFileName()"
+                  />
+                  <label for="resume" class="custom-file-label">
+                    <div class="upload-section">
+                      <div class="upload-img">
+                        <img
+                          src="./assets/walk-in-asserts/Upload_black_24dp.svg"
+                        />
+                      </div>
+                      <div class="upload-label">Upload Resume</div>
+                    </div>
+                  </label>
+                  <div id="selected-file-name" class="selected-file-name"></div>
+                </div>
+              </div>
+              <div class="details">
+                <p>Enter Portfolio URL (if any)</p>
+                <input type="text" id="portfolio" placeholder="Portfolio" />
+              </div>
+              <div class="details">
+                <p>Preferred Job Roles*</p>
+                <div class="radio-btn">
+                  <input
+                    type="checkbox"
+                    id="inst-dsg"
+                    name="role"
+                    value="Instructional Designer"
+                  />
+                  <label class="custom-checkbox" for="inst-dsg"
+                    >Instructional Designer</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="sde"
+                    name="role"
+                    value="Software Engineer"
+                  />
+                  <label class="custom-checkbox" for="sde"
+                    >Software Engineer</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="qa"
+                    name="role"
+                    value="Software Quality Engineer"
+                  />
+                  <label class="custom-checkbox" for="qa"
+                    >Software Quality Engineer</label
+                  >
+                </div>
+              </div>
+              <div class="details">
+                <p>
+                  If You Are Registering Via A Referral, Please Mention Full
+                  Name Of The Employee Who Referred You
+                </p>
+                <input type="text" id="refferal" placeholder="" />
+              </div>
+              <div class="update-me">
+                <input type="checkbox" id="check" />
+                <label class="custom-checkbox" for="check"
+                  >Send me job related updates via mail</label
+                >
+              </div>
+            </form>
+          </div>
+          <div class="profile-details">
+            <div class="profile-picture">
+              <div class="profile-img" onclick="openFileInput()">
+                <img
+                  src="./assets/extra-assert/profile-user-128px.png"
+                  id="display-image"
+                />
+              </div>
+              <label for="profile-image" class="upload-profile-picture"></label>
+              <input
+                type="file"
+                id="profile-image"
+                accept="image/*"
+                onchange="replaceProfileImage(event)"
+              />
+              <div class="upload-req"><p>Max image size: 5 MB</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--section 2-->
+    <div id="qualificationSection" class="section">
+      <div class="card">
+        <div class="card-footer">
+          <button class="accordion">
+            <div class="acc-text" id="acc-text-job">
+              Educational Qualifications
+            </div>
+            <div class="acc-arrow" id="acc-arrow-job">
+              <img src="./assets/extra-assert/down-arrow.png" />
+            </div>
+          </button>
+          <div class="panel">
+            <div class="cards-sub">
+              <div class="details short-label">
+                <p>Aggregate Percentage*</p>
+                <input
+                  type="text"
+                  id="percentage"
+                  class="short-label"
+                  placeholder=""
+                  required
+                />
+              </div>
+              <div class="dropdown">
+                <label for="states">Year of Passing*</label>
+                <div class="custom-icon" id="short-label">
+                  <select
+                    class="short-label"
+                    id="years"
+                    name="years"
+                    required
+                  ></select>
+                </div>
+
+                <div class="education-section">
+                  <div class="two-opt">
+                    <div class="section-opt">
+                      <div class="custom-icon-label">
+                        <label for="qualify">Qualification*</label>
+                      </div>
+                      <div class="custom-icon">
+                        <select id="qualify" name="qualify" required>
+                          <option value="Bachelor in Technology (B.Tech)">
+                            Bachelor in Technology (B.Tech)
+                          </option>
+                          <option value="XYZ">XYZ</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="section-opt">
+                      <div class="custom-icon-label">
+                        <label for="stream">Stream*</label>
+                      </div>
+                      <div class="custom-icon">
+                        <select id="stream" name="stream" required>
+                          <option value="Information Technology">
+                            Information Technology
+                          </option>
+                          <option value="XYZ">XYZ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="education-section">
+                  <div class="two-opt">
+                    <div class="section-opt">
+                      <div class="custom-icon-label">
+                        <label for="college">College*</label>
+                      </div>
+                      <div class="custom-icon">
+                        <select id="college" name="college" required>
+                          <option value="Pune Institute of Technology (PIT)">
+                            Pune Institute of Technology (PIT)
+                          </option>
+                          <option value="Others">Others</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="section-opt">
+                      <div class="details">
+                        <p>If others, please enter your college name</p>
+                        <input id="college-other" type="text" placeholder="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="details short-label" id="last-child-details">
+                  <p>Where is your college located?*</p>
+                  <input
+                    type="text"
+                    id="college-location"
+                    class="short-label"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Proffessional-->
+        <div class="card-footer">
+          <button class="accordion">
+            <div class="acc-text" id="acc-text-job">
+              Professional Qualifications
+            </div>
+            <div class="acc-arrow" id="acc-arrow-job">
+              <img src="./assets/extra-assert/down-arrow.png" />
+            </div>
+          </button>
+          <div class="panel">
+            <div class="cards-sub">
+              <p>Applicant Type*</p>
+              <div class="radio-btn" id="radio-exp">
+                <input
+                  type="radio"
+                  name="experience"
+                  id="fresher"
+                  value="fresher"
+                />
+                <label class="custom-radio" for="fresher">Fresher</label>
+
+                <input
+                  type="radio"
+                  name="experience"
+                  id="experience"
+                  value="experienced"
+                  checked
+                />
+                <label class="custom-radio" for="experience">Experienced</label>
+              </div>
+            </div>
+
+            <div class="radio-cards">
+              <div class="radio-cards-fresher" id="radio-cards-fresher">
+                <div class="cards-sub">
+                  <div class="details">
+                    <p>Select All The Technologies You Are Familiar In</p>
+                    <div class="radio-btn">
+                      <input
+                        type="checkbox"
+                        id="javascript"
+                        name="tech"
+                        value="Javascript"
+                      />
+                      <label class="custom-checkbox" for="javascript"
+                        >Javascript</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="angular"
+                        name="tech"
+                        value="Angular JS"
+                      />
+                      <label class="custom-checkbox" for="angular"
+                        >Angular JS</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="react"
+                        name="tech"
+                        value="React"
+                      />
+                      <label class="custom-checkbox" for="react">React</label>
+
+                      <input
+                        type="checkbox"
+                        id="nodejs"
+                        name="tech"
+                        value="Node JS"
+                      />
+                      <label class="custom-checkbox" for="nodejs"
+                        >Node JS</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="others"
+                        name="tech"
+                        value="Others"
+                      />
+                      <label class="custom-checkbox" for="others">Others</label>
+                    </div>
+
+                    <p class="p-others">If Others, Please Mention</p>
+                    <input type="text" id="fresher-other" placeholder="" />
+                  </div>
+
+                  <div class="details" id="last-child-details">
+                    <p>
+                      Have You Appeared For Any Test By Zeus in the past 12
+                      months?*
+                    </p>
+                    <div class="radio-btn" id="radio-exp">
+                      <input
+                        type="radio"
+                        name="appeared-test"
+                        id="appeared-test-yes"
+                        value="yes"
+                      />
+                      <label class="custom-radio" for="appeared-test-yes"
+                        >Yes</label
+                      >
+
+                      <input
+                        type="radio"
+                        name="appeared-test"
+                        id="appeared-test-no"
+                        value="no"
+                      />
+                      <label class="custom-radio" for="appeared-test-no"
+                        >No</label
+                      >
+                    </div>
+
+                    <p class="p-others">
+                      If Yes, Which Role Did You Apply For?
+                    </p>
+                    <input type="text" id="applied-role" placeholder="" />
+                  </div>
+                </div>
+              </div>
+
+              <!--Experienced-->
+              <div class="radio-cards-experienced" id="radio-cards-experienced">
+                <div class="cards-sub">
+                  <div class="details" id="short-label">
+                    <p>Years Of Experience*</p>
+                    <input
+                      type="text"
+                      id="experience-years"
+                      class="short-label"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+                  <div class="details" id="short-label">
+                    <p>Current CTC* (In Rupees)</p>
+                    <input
+                      type="text"
+                      id="current-ctc"
+                      class="short-label"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+                  <div class="details" id="short-label">
+                    <p>Expected CTC* (In Rupees)</p>
+                    <input
+                      type="text"
+                      id="expected-ctc"
+                      class="short-label"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+
+                  <div class="details">
+                    <p>Select All The Technologies You Expertise In*</p>
+                    <div class="radio-btn">
+                      <input
+                        type="checkbox"
+                        id="e-javascript"
+                        name="e-tech"
+                        value="Javascript"
+                      />
+                      <label class="custom-checkbox" for="e-javascript"
+                        >Javascript</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="e-angular"
+                        name="e-tech"
+                        value="Angular JS"
+                      />
+                      <label class="custom-checkbox" for="e-angular"
+                        >Angular JS</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="e-react"
+                        name="e-tech"
+                        value="React"
+                      />
+                      <label class="custom-checkbox" for="e-react">React</label>
+
+                      <input
+                        type="checkbox"
+                        id="e-nodejs"
+                        name="e-tech"
+                        value="Node JS"
+                      />
+                      <label class="custom-checkbox" for="e-nodejs"
+                        >Node JS</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="e-others"
+                        name="tech"
+                        value="Others"
+                      />
+                      <label class="custom-checkbox" for="e-others"
+                        >Others</label
+                      >
+                    </div>
+
+                    <p class="p-others">If Others, Please Mention</p>
+                    <input
+                      type="text"
+                      id="expertise-other-tech"
+                      placeholder=""
+                    />
+                  </div>
+
+                  <div class="details">
+                    <p>Select All The Technologies You Are Familiar In</p>
+                    <div class="radio-btn">
+                      <input
+                        type="checkbox"
+                        id="f-javascript"
+                        name="f-tech"
+                        value="Javascript"
+                      />
+                      <label class="custom-checkbox" for="f-javascript"
+                        >Javascript</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="f-angular"
+                        name="f-tech"
+                        value="Angular JS"
+                      />
+                      <label class="custom-checkbox" for="f-angular"
+                        >Angular JS</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="f-react"
+                        name="f-tech"
+                        value="React"
+                      />
+                      <label class="custom-checkbox" for="f-react">React</label>
+
+                      <input
+                        type="checkbox"
+                        id="f-nodejs"
+                        name="f-tech"
+                        value="Node JS"
+                      />
+                      <label class="custom-checkbox" for="f-nodejs"
+                        >Node JS</label
+                      >
+
+                      <input
+                        type="checkbox"
+                        id="f-others"
+                        name="f-tech"
+                        value="Others"
+                      />
+                      <label class="custom-checkbox" for="f-others"
+                        >Others</label
+                      >
+                    </div>
+
+                    <p class="p-others">If Others, Please Mention</p>
+                    <input
+                      type="text"
+                      id="familiar-other-tech"
+                      placeholder=""
+                    />
+                  </div>
+                  <div class="notice-exp">
+                    <p>Are You Currently On Notice Period?*</p>
+                    <div class="radio-btn" id="radio-exp">
+                      <input
+                        type="radio"
+                        name="notice-period"
+                        id="notice-period-yes"
+                        value="yes"
+                      />
+                      <label class="custom-radio" for="notice-period-yes"
+                        >Yes</label
+                      >
+
+                      <input
+                        type="radio"
+                        name="notice-period"
+                        id="notice-period-no"
+                        value="no"
+                        checked
+                      />
+                      <label class="custom-radio" for="notice-period-no"
+                        >No</label
+                      >
+                    </div>
+                  </div>
+                  <div>
+                    <div class="education-section">
+                      <div class="two-opt">
+                        <div class="section-opt">
+                          <div class="details-section">
+                            <p>If Yes, when will your notice period end?*</p>
+                            <div class="input-with-icon">
+                              <input
+                                type="text"
+                                id="notice-end-date"
+                                placeholder="Select Date"
+                                readonly
+                              />
+                              <span class="calendar-icon" id="calendar-icon">
+                                <img
+                                  src="./assets/quantum screen assets/icons/manage course.svg"
+                                  alt="Calendar Icon"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="section-opt">
+                          <div class="custom-icon-label">
+                            <label for="notice-period">
+                              <p>
+                                How long is your notice period?* (Mention in
+                                months)*
+                              </p>
+                            </label>
+                          </div>
+                          <div class="custom-icon">
+                            <select
+                              id="notice-period-duration"
+                              name="notice-period-duration"
+                              required
+                            >
+                              <option value="1 month">1 month</option>
+                              <option value="2 month">2 months</option>
+                              <option value="3 month">3 months</option>
+                              <option value="4 month">4 months</option>
+                              <option value="5 month">5 months</option>
+                              <option value="6 month">6 months</option>
+
+                              <option value="Others">Others</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="details" id="last-child-details">
+                    <div class="notice-exp">
+                      <p>
+                        Have You Appeared For Any Test By Zeus in the past 12
+                        months?*
+                      </p>
+                      <div class="radio-btn" id="radio-exp">
+                        <input
+                          type="radio"
+                          name="appeared-test"
+                          id="appeared-test--y"
+                          value="yes"
+                        />
+                        <label class="custom-radio" for="appeared-test--y"
+                          >Yes</label
+                        >
+
+                        <input
+                          type="radio"
+                          name="appeared-test"
+                          id="appeared-test--n"
+                          value="no"
+                        />
+                        <label class="custom-radio" for="appeared-test--n"
+                          >No</label
+                        >
+                      </div>
+                    </div>
+
+                    <p class="p-others">
+                      If Yes, Which Role Did You Apply For?
+                    </p>
+                    <input type="text" id="applied-role" placeholder="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------------------------Review Secdtion--------------------------------------->
+    <div id="reviewSection" class="section">
+      <div class="review-head">
+        <div class="review-head-title">Personal Information</div>
+        <div class="edit-icon">
+          <div class="-img">
+            <img src="./assets/extra-assert/green-pencil.png" />
+          </div>
+          <div class="edit-label">Edit</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="sub-card">
+          <div class="personal-details">
+            <form id="personalForm">
+              <div class="details">
+                <p>First Name*</p>
+                <div class="response-js" id="firstnamejs"></div>
+              </div>
+
+              <div class="details">
+                <p>Last Name*</p>
+                <div class="response-js" id="lastnamejs"></div>
+              </div>
+              <div class="details">
+                <p>Email*</p>
+                <div class="response-js no-cap" id="emailjs"></div>
+              </div>
+              <div class="details">
+                <p>Phone Number*</p>
+                <div class="phone-input">
+                  <div class="country-code+">+</div>
+                  <div
+                    class="response-js"
+                    id="country-code-js"
+                    style="margin-right: 8px"
+                  ></div>
+                  <div class="response-js" id="phonejs"></div>
+                </div>
+              </div>
+              <div class="details">
+                <div class="file-upload">
+                  <label for="resume" class="custom-file-label">
+                    <div class="upload-section">
+                      <div class="upload-img">
+                        <img
+                          src="./assets/walk-in-asserts/Upload_black.svg"
+                          class="black-icon"
+                        />
+                      </div>
+                      <div class="upload-label">Upload Resume</div>
+                    </div>
+                  </label>
+                  <div
+                    id="selected-file-name-js"
+                    class="selected-file-name"
+                  ></div>
+                </div>
+              </div>
+              <div class="details">
+                <p>Enter Portfolio URL (if any)</p>
+                <div class="response-js no-cap" id="portfoliojs"></div>
+              </div>
+              <div class="details">
+                <p>Preferred Job Roles*</p>
+                <div class="response-js" id="checkbox-results"></div>
+              </div>
+              <div class="details">
+                <p>
+                  If You Are Registering Via A Referral, Please Mention Full
+                  Name Of The Employee Who Referred You
+                </p>
+                <div class="response-js" id="refferaljs"></div>
+              </div>
+              <div class="update-me">
+                <input
+                  type="checkbox"
+                  class="black-checkbox"
+                  id="jobUpdateReview"
+                  disabled
+                />
+                <label class="black-checkbox" for="jobUpdateReview"
+                  >Send me job related updates via mail</label
+                >
+              </div>
+            </form>
+          </div>
+          <div class="profile-details">
+            <div class="profile-picture">
+              <div class="profile-img">
+                <img
+                  src="./assets/extra-assert/profile-user-128px.png"
+                  id="display-image-js"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-head">
+        <div class="review-head-title">Qualification</div>
+        <div class="edit-icon">
+          <div class="-img">
+            <img src="./assets/extra-assert/green-pencil.png" />
+          </div>
+          <div class="edit-label">Edit</div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card-footer">
+          <div class="accordion">
+            <div class="acc-text" id="acc-text-job">
+              Educational Qualifications
+            </div>
+          </div>
+          <div class="panel">
+            <div class="cards-sub">
+              <div class="details">
+                <p>Aggregate Percentage*</p>
+                <div class="response-js" id="agg-percentage"></div>
+              </div>
+              <div class="dropdown">
+                <div class="details">
+                  <label for="states">Year of Passing*</label>
+                  <div class="response-js" id="year-of-passing"></div>
+                </div>
+
+                <div class="education-section">
+                  <div class="two-opt">
+                    <div class="section-opt">
+                      <div class="details">
+                        <label for="qualify">Qualification*</label>
+                        <div
+                          class="response-js"
+                          id="qualification-degree"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="section-opt">
+                      <div class="details">
+                        <label for="stream">Stream*</label>
+                        <div class="response-js" id="stream-degree"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="education-section">
+                  <div class="two-opt">
+                    <div class="section-opt">
+                      <div class="details">
+                        <label for="college">College*</label>
+                        <div class="response-js" id="college-name"></div>
+                      </div>
+                    </div>
+                    <div class="section-opt">
+                      <div class="details">
+                        <p>If others, please enter your college name</p>
+                        <div class="response-js" id="other-college-name"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="details" id="last-child-details">
+                  <p>Where is your college located?*</p>
+                  <div class="response-js" id="location-of-college"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card-footer">
+          <div class="accordion">
+            <div class="acc-text" id="acc-text-job">
+              Professional Qualifications
+            </div>
+          </div>
+          <div class="panel">
+            <div class="cards-sub">
+              <p>Applicant Type*</p>
+              <div class="response-js" id="applicant-type-response"></div>
+            </div>
+
+            <div class="radio-cards">
+              <!--Experienced-->
+              <div class="radio-cards-experienced" id="radio-cards-experienced">
+                <div class="cards-sub">
+                  <div class="details experience-only">
+                    <p>Years Of Experience*</p>
+                    <div class="response-js" id="years-of-experience"></div>
+                  </div>
+                  <div class="details experience-only">
+                    <p>Current CTC* (In Rupees)</p>
+                    <div class="response-js" id="curr-ctc"></div>
+                  </div>
+                  <div class="details experience-only">
+                    <p>Expected CTC* (In Rupees)</p>
+                    <div class="response-js" id="exp-ctc"></div>
+                  </div>
+
+                  <div class="details experience-only">
+                    <p>Select All The Technologies You Expertise In*</p>
+                    <div class="response-js" id="exp-tech-checkboxes"></div>
+
+                    <p class="p-others">If Others, Please Mention</p>
+                    <div class="response-js" id="exp-other-tech-text"></div>
+                  </div>
+
+                  <div class="details">
+                    <p>Select All The Technologies You Are Familiar In</p>
+                    <div
+                      class="response-js"
+                      id="familiar-tech-checkboxes"
+                    ></div>
+
+                    <p class="p-others">If Others, Please Mention</p>
+                    <div
+                      class="response-js"
+                      id="familiar-other-tech-text"
+                    ></div>
+                  </div>
+
+                  <div class="notice-exp experience-only">
+                    <p>Are You Currently On Notice Period?*</p>
+                    <div class="response-js" id="serve-notice-period"></div>
+                  </div>
+                  <div>
+                    <div class="education-section experience-only">
+                      <div class="two-opt">
+                        <div class="section-opt">
+                          <div class="details-section">
+                            <p>If Yes, when will your notice period end?*</p>
+                            <div
+                              class="response-js"
+                              id="notice-period-date"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="section-opt">
+                          <div class="details">
+                            <label for="notice-period ">
+                              <p style="white-space: nowrap">
+                                How long is your notice period?* (Mention in
+                                months)*
+                              </p>
+                            </label>
+                            <div class="experience-only">
+                              <div
+                                class="response-js"
+                                id="notice-period-duration-month"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="details" id="last-child-details">
+                    <p>
+                      Have You Appeared For Any Test By Zeus in the past 12
+                      months?*
+                    </p>
+                    <div class="radio-btn" id="radio-exp">
+                      <div class="response-js" id="appeared-test-zeus"></div>
+                    </div>
+                    <p class="p-others">
+                      If Yes, Which Role Did You Apply For?
+                    </p>
+                    <div class="response-js" id="role-applied"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="button">
+        <button
+          id="prevFooterBtn"
+          onclick="prevSection()"
+          style="display: none"
+        >
+          Previous
+        </button>
+      </div>
+      <div class="button">
+        <button id="nextFooterBtn" onclick="nextSection()">Next</button>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

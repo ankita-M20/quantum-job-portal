@@ -1,0 +1,572 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(./assets/Quicksand-font-1/Quicksand-VariableFont_wght.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Bold.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Light.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Medium.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Regular.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-SemiBold.ttf);
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #eeeeee;
+    font-family: Quicksand;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+  }
+
+  
+  p {
+    font-size: 12px;
+    font-weight: normal;
+    font-family: Quicksand;
+    color: #666666;
+    height: 15px;
+    margin: 0px;
+  }
+
+  /*-----------------------------------Header-------------------------------------------*/
+
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Add some padding to the header if needed */
+    background-color: #1F2834;
+    overflow: hidden;
+    box-shadow: 0px 2px #41b3d8;
+    padding: 10px 15px;
+    justify-content: space-between;
+    margin-bottom: 2px;
+  }
+
+  .logo {
+    max-width: 100px;
+    height: 36px;
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-right: 20px; 
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 40px;
+    top: 10px;
+  }
+
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1px;
+    border: 2px solid #3fd28b;
+    background: #3C4E62;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 16px;
+  }
+
+  /*------------------------------Main----------------------------------*/
+
+  .cards {
+    margin: 24px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px #0000003D;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+.cards-sub{
+  padding: 16px;
+}
+
+.card-tail {
+  margin-bottom: 8px;
+}
+/*-------------------------Walk-in Portal- card - head------------------------------------------*/
+
+.walk-in-apply {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.walk-in-title {
+    font-family: Quicksand;
+    font-weight: normal;
+    color: #222222;
+    text-align: left;
+    letter-spacing: 0px;
+    font-size: 18px;
+  }
+
+  .apply-btn button {
+    background-color: #3FD28B;
+        color: #25313F;
+        border: none;
+        padding: 5px 16px;
+        font-size: 14px;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-transform: uppercase;
+}
+
+.apply-btn button:hover {
+    background-color: #2CAE6D;
+}
+
+  .walk-in-details {
+    font-weight: normal;
+    font-family: Quicksand, sans-serif;
+    display:block;
+    margin-bottom: 18px;
+}
+
+  .walk-in-details-sub {
+    margin-top: 8px;
+    margin-bottom: 20x;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  .walk-in-date {
+    font-size: 14px;
+    font-weight: medium;
+    font-family: Quicksand, sans-serif;
+    color: #222222;
+    border-right: 1px solid #d3d3d3;
+    padding-right: 18px;
+    margin-right: 18px;
+}
+
+.location-icon {
+    width: 16px;
+    height: 16px;
+    fill: #666666; /* Apply color to the SVG image */
+    margin-right: 8px;
+}
+
+.walk-in-location {
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.walk-in-location p {
+    margin: 0;
+}
+
+.card-head {
+  border-bottom: 1px solid #d3d3d3;
+  margin-bottom: 16px; /* Add padding to separate content from border */
+}
+
+/*-------------------------Walk-in Portal- card - tail------------------------------------------*/
+
+.job-roles{
+  margin-bottom: 8px;
+}
+
+.avail-roles {
+  display: flex;
+  align-items: center;
+}
+
+.avail-roles > div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: medium;
+  font-family: Quicksand, sans-serif;
+  letter-spacing: 0;
+  color: #1F7A54;
+  margin-right: 8px; /* Margin between job-logos and text */
+  padding-right: 8px; /* Padding after text */
+}
+
+.avail-roles > div:not(:last-child) {
+  border-right: 1px solid #d3d3d3; /* Light grey border */
+  padding-right: 8px; /* Margin after border */
+}
+
+.job-icons{
+  border: 1px solid #000000; /* Add a black border */
+  height: 16px;
+  width: 16px;
+  border-radius: 50%; /* Make the border round */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+ 
+  padding: 4px;
+  margin-right: 8px;
+}
+
+  .job-logos{
+    height: 16px;
+    width: 16px;
+  }
+
+  .job-logos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain; 
+}
+
+/*------------------------ACCORDION---------------------------------*/
+
+.accordion {
+  background-color: #DBEFFF;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+  font-family: Quicksand;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: relative;
+  padding: 0px;
+}
+
+.acc-text {
+  color: #222222;
+  padding: 10px 16px;
+  font-size: 16px;
+} 
+
+#acc-text-job {
+  padding: 18px 16px;
+}
+
+#acc-arrow-job {
+  padding: 16px 10px;
+}
+
+.acc-arrow {
+  border-left: 1px solid #0000003D;
+  padding: 8px 10px;
+}
+
+.acc-arrow img {
+  height: 12px;
+  width: 12px;
+}
+
+.accordion.active .acc-arrow{
+  transform: rotate(180deg);
+  border-left: none;
+  border-right: 1px solid #0000003D;
+  padding: 8px 10px;
+}
+
+.active, .accordion:hover {
+  background-color: #DBEFFF;
+}
+
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.content {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-family: Quicksand;
+  letter-spacing: 0px;
+  color: #222222;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #0000003D;
+}
+
+.process .content,
+.requirement .content {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/*Role Cards*/
+
+.roles-requirements .cards {
+  margin-bottom: 16px;
+  margin-top: 0px;
+}
+
+.roles-requirements {
+  position: relative;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 24px; /* Adjust as needed */
+  right: 24px; /* Adjust as needed */
+  background-color: #3FD28B;
+  box-shadow: 0px 4px 6px #00000029;
+  opacity: 1;
+  border: none;
+  border-radius: 50%; /* Make the button circular */
+  padding: 0;
+  display: none; /* Initially hide the button */
+}
+
+.floating-button button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Active state of the accordion */
+.accordion.active + .panel ~ .floating-button {
+  display: block;
+}
+
+/*------------Radio-btn-----------------------------*/
+.card-title{
+  margin-bottom: 24px;
+}
+.time-slots,
+.role-preferences {
+  margin-bottom: 16px;
+}
+/* Hide the default radio buttons */
+.radio-btn input[type="radio"] {
+  display: none;
+}
+
+/* Style the container for each radio button and label */
+.radio-btn .radio-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  margin-bottom: 16px; /* Add gap between radio buttons */
+}
+
+
+/* Style the custom radio labels with background images for both on and off states */
+.radio-btn .custom-radio {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding-left: 30px; /* Add space for the custom image */
+  position: relative;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.radio-btn .custom-radio::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px; /* Set the width of the custom image */
+  height: 20px; /* Set the height of the custom image */
+  background-image: url('./assets/icons/radio-button-off.svg'); /* Add the path to your off image */
+  background-size: cover;
+}
+
+/* Style the custom radio labels when selected (on) */
+.radio-btn input[type="radio"]:checked + .custom-radio::before {
+  /* Add styles for the selected (on) state */
+  background-image: url('./assets/icons/radio-button-on.svg'); /* Add the path to your on image */
+}
+
+/* Style the custom checkbox labels */
+
+/* Hide the default checkboxes */
+.radio-btn input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the container for each checkbox and label */
+.radio-btn .checkbox-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  margin-bottom: 16px; /* Add gap between checkboxes */
+}
+
+/* Style the custom checkbox labels with background images for both on and off states */
+.radio-btn .custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding-left: 30px; /* Add space for the custom image */
+  position: relative;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.radio-btn .custom-checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px; /* Set the width of the custom image */
+  height: 20px; /* Set the height of the custom image */
+  background-image: url('./assets/icons/checkbox-unchecked.svg'); /* Add the path to your off image */
+  background-size: cover;
+}
+
+/* Style the custom checkbox labels when selected (on) */
+.radio-btn input[type="checkbox"]:checked + .custom-checkbox::before {
+  /* Add styles for the selected (on) state */
+  background-image: url('./assets/icons/checkbox-checked.svg'); /* Add the path to your on image */
+}
+
+/*-----------Upload file----------------------------*/
+/* Hide the default file input */
+.file-upload .file-input {
+  display: none;
+}
+
+.file-upload {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle; /* Vertically align the container */
+}
+
+/* Style the custom file label */
+.custom-file-label {
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #1F7A54;
+  align-items: center;
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+}
+.upload-label {
+  font-size: 14px;
+  padding: 3px 0px;
+}
+ .upload-img {
+  height: 24px;
+  margin-right: 8px;
+ }
+/*------------MEDIA-------------------------*/
+
+@media only screen and (max-width: 375px) {
+  header {
+      padding: 8px 15px; /* Adjust padding */
+  }
+
+  .logo {
+      max-width: 80px; /* Adjust logo size */
+      height: 36px; /* Adjust logo height */
+  }
+
+  .profile-icon {
+      width: 40px; /* Adjust profile icon size */
+      height: 40px; /* Adjust profile icon height */
+      font-size: 16px; /* Adjust font size */
+  }
+
+  .job-icons {
+    margin-bottom: 8px;
+  }
+
+  .job-opportnity,
+  .job-roles,
+  .avail-roles,
+  .inst-designer,
+  .soft-eng,
+  .qa-eng,
+  .intern-opportunity {
+      display: block;
+      font-size: 14px; /* Adjust font size */
+  }
+
+  .cards {
+      width: 343px; /* Set card width */
+      margin: 24px auto; /* Center align card */
+  }
+  
+  .cards-sub {
+      width: 300px; /* Set content width */
+      margin: 0 auto; /* Center align content */
+  }
+
+  .walk-in-date {
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+  .job-icons {
+    margin-bottom: 0px;
+  }
+  .location-icon {
+    margin-right: 7px;
+  }
+
+  .avail-roles > div:not(:last-child) {
+    border-right: none;
+    margin-bottom: 8px;
+  }
+
+  .intern-opportunity{
+    margin-top: 16px;
+    display: inline-block; /* Adjust width to content */
+    font-family: Quicksand, sans-serif;
+    font-weight: medium;
+    font-size: 10px;
+    color: #222222;
+    background-color: #EEDD6B;
+    border-radius: 9px;
+    opacity: 1;
+    white-space: nowrap;
+    padding: 2px 8px;
+  }
+
+  /* Position the "Apply" button as a fixed footer */
+  .apply-btn button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+  }
+
+  /* Center-align the button */
+  .apply-btn button {
+    margin: 0 auto;
+  }
+
+  .floating-button{
+    bottom: 60px;
+  }
+}

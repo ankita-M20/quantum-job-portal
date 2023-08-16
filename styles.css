@@ -1,0 +1,326 @@
+@font-face {
+  font-family: Quicksand;
+  src: url(assets/Quicksand-font-1/Quicksand-VariableFont_wght.ttf);
+  src: url(assets/Quicksand-font-1/static/Quicksand-Bold.ttf);
+  src: url(assets/Quicksand-font-1/static/Quicksand-Light.ttf);
+  src: url(assets/Quicksand-font-1/static/Quicksand-Medium.ttf);
+  src: url(assets/Quicksand-font-1/static/Quicksand-Regular.ttf);
+  src: url(assets/Quicksand-font-1/static/Quicksand-SemiBold.ttf);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #eeeeee;
+  font-family: Quicksand;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+p {
+  margin: 0px;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("assets/header\ pattern\ svg.svg");
+  padding: 10px; /* Add some padding to the header if needed */
+  box-shadow: 0px 2px #41b3d8;
+  opacity: 1;
+}
+
+.logo-container {
+  margin-right: 20px; /* Adjust the right margin as needed */
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.login {
+  width: 490px;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  box-shadow: inset 0px 4px #41b3d8;
+  padding: 24px 32px;
+  /*margin-bottom: 35px;
+    ustify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;*/
+}
+
+.main {
+  /*flex: 1;*/
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-head {
+  /* display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center; 
+    margin-bottom: 20px;*/
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 32px;
+}
+
+/* Styles for the text input */
+.text-input {
+  position: relative;
+  margin-bottom: 32px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  font-family: Quicksand;
+}
+
+.text-input input[type="text"],
+.text-input input[type="password"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #0000003d; /* Set the color for the bottom line */
+  background-color: transparent; /* Make the background transparent */
+  padding: 5px 0px; /* Adjust padding as needed */
+  font-size: 16px; /* Set the font size for the input text */
+  outline: none; /* Remove the default focus outline */
+  letter-spacing: 0;
+  font-family: Quicksand;
+  color: #666666;
+}
+
+.text-input input[type="checkbox"] {
+  accent-color: green;
+  width: 18px;
+  height: 18px;
+  margin: 0; /* Remove the margin */
+}
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me label {
+  margin-left: 5px; /* Add space between checkbox and label */
+}
+
+.eye-icon {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-image: url("./assets/icons/preview.svg"); /* Replace with the path to your eye icon image */
+  width: 20px; /* Set the width of the icon */
+  height: 20px; /* Set the height of the icon */
+  background-size: cover;
+  margin-bottom: 9px;
+}
+
+button[type="submit"] {
+  display: flex;
+  width: 50%;
+  padding: 10px 0; /* 5px padding on top and bottom */
+  font-size: 14px;
+  color: black; /* Text color - white */
+  background-color: #3fd28b; /* Green background color */
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none; /* Remove the default focus outline */
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 2px 5px grey;
+  font-family: Quicksand;
+}
+
+/* On hover, change the background color */
+button[type="submit"]:hover {
+  background-color: #3fd28b; /* Black background color on hover */
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+a:link {
+  color: #3fd28b;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.login-footer {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: right;
+  font-size: 12px;
+  letter-spacing: 0px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.login-footer p {
+  margin: 0; /* Remove the default margin */
+  font-size: 12px;
+}
+
+.create-account {
+  text-align: right;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.create-account a {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #1f7a54;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 1;
+  transition: color 0.3s;
+}
+
+.create-account a:hover {
+  color: #147546;
+}
+
+/*
+  
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally *
+    background-color: #e0e1e1; /* Background color for the footer *
+    padding: 10px; /* Add some padding to the footer content *
+    font-size: 14px; /* Font size for the copyright text *
+  }
+  
+  footer p {
+    margin: 0; /* Remove margin to prevent extra spacing *
+    color: #616161; /* Font color for the copyright text *
+    text-align: center;
+    padding-right: 10px; 
+  }
+  
+  footer img {
+    border-right: 1px solid grey;
+    padding-right: 10px;
+    margin-right: 10px;
+    justify-self: center;
+  }
+  
+  footer b {
+    margin-left: 5px;
+    margin-right: 5px; 
+  } */
+
+.foot {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  padding: 10px; /* Add some padding to the .foot div */
+  margin-bottom: 30px;
+}
+
+/* Styles for the links within .foot div */
+.foot a {
+  color: #3fd28b; /* Change link color to green (#3fd28b) */
+  text-decoration: none; /* Remove underline from links */
+  padding: 0 10px; /* Add some padding to the links */
+  border-right: 1px solid grey; /* Add a right border to separate links */
+}
+
+.foot span:nth-child(2) a {
+  border-right: none;
+}
+
+/*Making pass & user interactive*/
+
+.password-requirements,
+.user-requirements {
+  color: red;
+  flex: 1;
+  font-size: xx-small; /* Set the desired font size */
+  display: none; /* Hide the message by default */
+  margin: 0px;
+  justify-self: start;
+  font-family: Quicksand;
+}
+
+.password-details,
+.user-details {
+  display: grid;
+  position: relative;
+  grid-template-columns: 2fr 1fr; /* Password requirements occupy 2 parts, forgot password occupies 1 part */
+  align-items: center; /* Vertically center align items within the grid */
+  justify-items: end;
+}
+
+.user-details {
+  margin-bottom: 32px;
+}
+
+.password-details {
+  margin-bottom: 26px;
+}
+
+/* Styles for the forgot links */
+.forgot {
+  text-align: end;
+  font-size: small;
+  padding-top: 5px;
+  grid-column: 2;
+  font-size: 14px;
+}
+
+.forgot a {
+  text-decoration: none;
+  color: #1f7a54; /* Set the color for the forgot link */
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+.password-details .forgot {
+  text-align: end; /* Align to end when password requirements are displayed */
+}
+
+@media (max-width: 375px) {
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the container takes the full viewport height */
+  }
+
+  .login {
+    background: white;
+    box-shadow: inset 0px 5px #41b3d8;
+    padding: 20px;
+    text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .forgot {
+    white-space: nowrap;
+  }
+}

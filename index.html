@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quantum Login Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+      function redirectToIndexPage() {
+        event.preventDefault();
+
+        const usernameInput = document.querySelector('input[name="uname"]');
+        const usernameValue = usernameInput.value;
+
+        const passwordInput = document.querySelector('input[name="pass"]');
+        const passwordValue = passwordInput.value;
+
+        
+    // Email validation regex pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const passwordPattern =
+          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$/;
+
+      const userRequirements = document.querySelector(".user-requirements");
+      const passwordRequirements = document.querySelector(".password-requirements");
+
+      if (!emailPattern.test(usernameValue)) {
+          userRequirements.textContent = "**Invalid email format.**";
+          userRequirements.style.display = "block"; // Show the email error message
+          passwordRequirements.style.display = "none"; // Hide the password error message
+          return; // Do not proceed with form submission
+      } else {
+          userRequirements.style.display = "none"; // Hide the email error message
+      }
+
+      if (!passwordPattern.test(passwordValue)) {
+          passwordRequirements.textContent =
+              "**Password must contain at least one uppercase letter, one special character, one digit, and be at least 8 characters long.**";
+          passwordRequirements.style.display = "block"; // Show the message
+          return; // Do not proceed with form submission
+      } else {
+          passwordRequirements.style.display = "none"; // Hide the message if password is valid
+      }
+
+      if (usernameValue !== "user@gmail.com") {
+          userRequirements.textContent = "**User doesn't exist.**";
+          userRequirements.style.display = "block"; // Show the user error message
+          passwordRequirements.style.display = "none"; // Hide the password error message
+          return;
+      } else {
+          userRequirements.style.display = "none"; // Hide the user error message
+      }
+
+      // If both user and password are correct
+      if (passwordValue === "User@123") {
+          // Redirect to the dashboard after a delay
+          setTimeout(function () {
+              window.location.href = "./walk-in-portal/index.html";
+          }, 100); // Adjust the delay time as needed
+      } else {
+          passwordRequirements.textContent = "**Incorrect Password**";
+          passwordRequirements.style.display = "block"; // Show the password error message
+      }
+      }
+
+      function togglePasswordVisibility() {
+        const passwordInput = document.querySelector('input[name="pass"]');
+        const eyeIcon = document.querySelector(".eye-icon");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeIcon.style.backgroundImage = 'url("./assets/preview-hide.svg")'; // Change to the path of your hidden icon image
+        } else {
+          passwordInput.type = "password";
+          eyeIcon.style.backgroundImage = 'url("./assets/icons/preview.svg")'; // Change to the path of your initial eye icon image
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="./assets/icons/Zeus-LMS-logo.svg"
+          alt="logo"
+          class="logo"
+        />
+      </div>
+    </header>
+    <div class="main">
+      <div class="login">
+        <div class="page-head"> Log in </div>
+        <form
+          id="myForm"
+          action="./dashboard"
+          method="post"
+          onsubmit="redirectToIndexPage()"
+        >
+
+          <div class="text-input">
+            <input
+              type="text"
+              placeholder="Email ID*"
+              name="uname"
+              required
+            />
+            <label for="uname"></label>
+            <div class="user-details">
+              <p class="user-requirements"></p>
+              <div class="forgot">
+                <a href="#">FORGOT EMAIL ID?</a>
+              </div>
+            </div>
+            <input
+              type="password"
+              placeholder="Password*"
+              name="pass"
+              required
+            />
+            <div class="eye-icon" onclick="togglePasswordVisibility()"></div>
+
+            <label for="pass"></label>
+            <div class="password-details">
+              <p class="password-requirements"></p>
+              <div class="forgot">
+                <a href="#">FORGOT PASSWORD?</a>
+              </div>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember Me</label>
+            </div>
+          </div>
+
+          <button type="submit">LOG IN</button>
+        </form>
+        <div class="login-footer"><p>Not registered yet?</p></div>
+        <div class="create-account"><a href="./create-account/index.html">Create an account</a></div>
+      </div>
+    </div>
+    <div class="foot">
+      <span><a href="#">About</a></span>
+      <span><a href="#">Contact Us</a></span>
+    </div>
+    <!--<footer>
+      <img src="./assets/icons/logo used in footer.svg" alt="footer-logo" />
+      <p>
+        Copyright © 2020-2021 <b> Zeus Systems Pvt. Ltd. </b> Al rights
+        reserved.
+      </p>
+    </footer>-->
+  </body>
+</html>

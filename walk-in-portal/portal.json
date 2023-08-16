@@ -1,0 +1,41 @@
+[
+    {
+        "expiry": "5 days",
+        "walkINtitle": "Walk In for Designer Job Role",
+        "dateStart": "10-Jul-2021",
+        "dateEnd": "11-Jul-2021",
+        "location": "Mumbai",
+        "jobRoles": {
+            "instructionalDesigner": true,
+            "softwareEngineer": false,
+            "softwareQualityEngineer": false
+        },
+        "internship": null
+    },
+    {
+        "expiry": null,
+        "walkINtitle": "Walk In for Multiple Job Roles",
+        "dateStart": "03-Jul-2021",
+        "dateEnd": "04-Jul-2021",
+        "location": "Mumbai",
+        "jobRoles": {
+            "instructionalDesigner": true,
+            "softwareEngineer": true,
+            "softwareQualityEngineer": true
+        },
+        "internship": "MCA"
+    },
+    {
+        "expiry": null,
+        "walkINtitle": "Walk In for Design and Development Job Role",
+        "dateStart": "10-Jul-2021",
+        "dateEnd": "11-Jul-2021",
+        "location": "Mumbai",
+        "jobRoles": {
+            "instructionalDesigner": true,
+            "softwareEngineer": true,
+            "softwareQualityEngineer": false
+        },
+        "internship": null
+    }
+]

@@ -1,0 +1,794 @@
+@font-face {
+  font-family: Quicksand;
+  src: url(./assets/Quicksand-font-1/Quicksand-VariableFont_wght.ttf);
+  src: url(./assets/Quicksand-font-1/static/Quicksand-Bold.ttf);
+  src: url(./assets/Quicksand-font-1/static/Quicksand-Light.ttf);
+  src: url(./assets/Quicksand-font-1/static/Quicksand-Medium.ttf);
+  src: url(./assets/Quicksand-font-1/static/Quicksand-Regular.ttf);
+  src: url(./assets/Quicksand-font-1/static/Quicksand-SemiBold.ttf);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #eeeeee;
+  font-family: Quicksand;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+p,
+.dropdown label {
+  font-size: 12px;
+  font-weight: normal;
+  font-family: Quicksand;
+  color: #666666;
+  height: 15px;
+  margin: 0px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+/*-----------------------------------Header-------------------------------------------*/
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Add some padding to the header if needed */
+  background-color: #1f2834;
+  overflow: hidden;
+  box-shadow: 0px 2px #41b3d8;
+  padding: 10px 15px;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.logo {
+  max-width: 100px;
+  height: 36px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  margin-right: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  height: 40px;
+  top: 10px;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1px;
+  border: 2px solid #3fd28b;
+  background: #3c4e62;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 16px;
+}
+
+/*----------------Sub Header-------------------------------*/
+
+.sub-head-btns {
+  padding: 10px 0px;
+  justify-content: end;
+  display: flex;
+  gap: 16px;
+}
+
+.sub-header {
+  justify-content: space-between;
+  display: flex;
+  background-color: #3c4e62;
+  padding: 0px 28px;
+  align-items: center;
+  color: #ffffff;
+}
+
+.back-arrow img {
+  width: 24px;
+  height: 24px;
+  padding: 12px 0px;
+}
+
+button {
+  background: #3fd28b; /* Background color */
+  box-shadow: 0px 3px 5px #0000003d;
+  border-radius: 2px;
+  opacity: 1;
+  font-family: Quicksand, sans-serif;
+  font-weight: medium;
+  font-size: 14px;
+  letter-spacing: 0;
+  color: #25313f;
+  padding: 5px 18px; /* Padding: 10px top and bottom, 20px left and right */
+  cursor: pointer; /* Show pointer cursor on hover */
+  border: none; /* Remove default button border */
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #37ad6a; /* Darker background color on hover */
+}
+
+.button button[disabled] {
+  opacity: 0.5; /* Set the desired opacity value */
+  cursor: not-allowed; /* Change cursor style when disabled */
+}
+
+/*---------------Head Options to navigate----------------------*/
+
+/* Add your CSS styles here */
+.nav-link {
+  color: #222222; /* Default color for navigation links */
+  align-items: center;
+}
+
+.nav-link.active {
+  color: #222222; /* Active color for navigation links */
+}
+
+.head-option {
+  margin: 24px;
+  margin-bottom: 0px;
+  background-color: #ffffff;
+  display: flex;
+  padding: 12px 16px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+
+.label {
+  align-items: center;
+  background-color: transparent;
+}
+
+/* Add this CSS rule to your stylesheet */
+.round-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* Make it round */
+  display: flex;
+  margin-right: 10px; /* Add spacing between the round div and the pencil icon */
+  background-color: #757575;
+  align-items: center;
+  justify-items: center;
+  margin-right: 8px;
+}
+
+/* Add this CSS rule to your stylesheet */
+.pencil-icon {
+  display: flex;
+  margin: auto; /* Center the image both horizontally and vertically */
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  max-height: 100%; /* Ensure the image doesn't exceed its container's height */
+}
+
+.pencil-icon img {
+  height: 12px;
+  display: block;
+}
+
+.personal,
+.qualification,
+.review {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: Quicksand;
+  color: #222222;
+}
+
+.personal {
+  margin-right: 8px;
+}
+.qualification {
+  margin: 0px 8px;
+}
+.review {
+  margin-left: 8px;
+}
+
+/* Add this CSS rule to style active round icons */
+.active-icon {
+  background-color: #3fd28b;
+}
+
+/* Add this CSS rule to style active navigation links */
+.active-link {
+  color: #3fd28b;
+}
+
+.section-divider {
+  border-top: 1px solid #ccc;
+  flex-grow: 1;
+  padding: 0px 5px;
+  box-shadow: none;
+}
+
+.round-icon::before {
+  content: "";
+  position: absolute;
+  left: -17px; /* Adjust this value for spacing */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 15px;
+  background-color: #ccc;
+}
+/*---------------------------Card-----------------------*/
+
+.card,
+.cards {
+  background-color: transparent;
+  margin: 24px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.card-footer {
+  margin-bottom: 24px;
+}
+
+.sub-card {
+  padding: 24px;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.personal-details {
+  width: 50%;
+  margin-right: 10px;
+}
+
+/* Styles for the text input */
+.details,
+.details-section {
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  font-family: Quicksand;
+}
+
+.last-child-details,
+#last-child-details {
+  margin-bottom: 0px;
+}
+
+.details input[type="text"],
+.details-section input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #0000003d; /* Set the color for the bottom line */
+  background-color: transparent; /* Make the background transparent */
+  padding: 5px 0px; /* Adjust padding as needed */
+  font-size: 16px; /* Set the font size for the input text */
+  outline: none; /* Remove the default focus outline */
+  letter-spacing: 0;
+  font-family: Quicksand;
+  color: #222222;
+  width: 100%;
+}
+
+.text-input input[type="checkbox"] {
+  accent-color: green;
+  width: 18px;
+  height: 18px;
+  margin: 0; /* Remove the margin */
+}
+.profile-details {
+  width: 50%;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  width: 134px;
+}
+
+#country-code {
+  width: 20px;
+  padding: 5px;
+}
+
+#phone-number {
+  flex: 1;
+  margin-left: 10px; /* Adjust this value as needed for spacing between inputs */
+  width: 90px;
+  padding: 5px;
+}
+
+/*-----------Upload file----------------------------*/
+/* Hide the default file input */
+.file-upload .file-input {
+  display: none;
+}
+
+.file-upload {
+  display: flex;
+  position: relative;
+  vertical-align: middle; /* Vertically align the container */
+  align-items: center;
+}
+
+/* Style the custom file label */
+.custom-file-label {
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #1f7a54;
+  align-items: center;
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+}
+.upload-label {
+  font-size: 14px;
+  padding: 3px 0px;
+}
+.upload-img {
+  height: 24px;
+  margin-right: 8px;
+}
+
+.selected-file-name {
+  margin-left: 10px; /* Adjust this value for spacing */
+  white-space: nowrap; /* Prevent line break */
+}
+/*file upload ends*/
+
+/* ---------------------custom checkbox labels ----------------------------*/
+
+/* Hide the default checkboxes */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the container for each checkbox and label */
+.checkbox-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  margin-bottom: 16px; /* Add gap between checkboxes */
+}
+
+/* Style the custom checkbox labels with background images for both on and off states */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding-left: 30px; /* Add space for the custom image */
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.custom-checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px; /* Set the width of the custom image */
+  height: 20px; /* Set the height of the custom image */
+  background-image: url("./assets/icons/checkbox-unchecked.svg"); /* Add the path to your off image */
+  background-size: cover;
+}
+
+/* Style the custom checkbox labels when selected (on) */
+input[type="checkbox"]:checked + .custom-checkbox::before {
+  /* Add styles for the selected (on) state */
+  background-image: url("./assets/icons/checkbox-checked.svg"); /* Add the path to your on image */
+}
+/*------------------------------Update me-----------------------------*/
+.update-me {
+  display: flex;
+  align-items: center;
+}
+
+.update-me label {
+  font-size: 14px;
+}
+
+.update-me .custom-checkbox {
+  margin-top: 0px;
+}
+/*-----------------------Profile Photo_----------------------------------*/
+.profile-details {
+  display: flex;
+  justify-content: end;
+}
+
+.profile-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1f7a54;
+}
+.profile-img {
+  display: flex;
+  height: 134px;
+  width: 134px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto; /* Optional: Center horizontally */
+}
+
+.profile-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.upload-profile-picture {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.upload-req p {
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+#profile-image {
+  display: none; /* Hide the file input */
+}
+
+.upload-profile-picture::before {
+  content: "UPLOAD DISPLAY PICTURE";
+}
+
+.upload-profile-picture::after {
+  content: "CHANGE DISPLAY PICTURE";
+  display: none;
+}
+
+.upload-profile-picture.uploaded::before {
+  display: none;
+}
+
+.upload-profile-picture.uploaded::after {
+  display: inline;
+}
+
+/*------------------------ACCORDION---------------------------------*/
+
+.accordion {
+  background-color: #dbefff;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+  font-family: Quicksand;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: relative;
+  padding: 0px;
+}
+
+.acc-text {
+  color: #222222;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+#acc-text-job {
+  padding: 18px 16px;
+  text-transform: none;
+}
+
+#acc-arrow-job {
+  padding: 16px 10px;
+}
+
+.acc-arrow {
+  border-left: 1px solid #0000003d;
+  padding: 8px 10px;
+}
+
+.acc-arrow img {
+  height: 12px;
+  width: 12px;
+}
+
+.accordion.active .acc-arrow {
+  transform: rotate(180deg);
+  border-left: none;
+  border-right: 1px solid #0000003d;
+  padding: 8px 10px;
+}
+
+.accordion:hover {
+  background-color: #dbefff;
+}
+
+.panel {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+}
+
+.content {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-family: Quicksand;
+  letter-spacing: 0px;
+  color: #222222;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #0000003d;
+}
+
+.process .content,
+.requirement .content {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/*Accordion Panel content*/
+.cards-sub {
+  padding: 24px;
+  background-color: #fff;
+  height: auto;
+}
+
+.short-label,
+#short-label {
+  flex: 1;
+  width: 185px;
+  padding-bottom: 5px;
+  padding-top: 0px;
+}
+/*dropdown*/
+/* Styles for the dropdown container */
+.two-opt {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+}
+
+.section-opt {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.custom-icon select {
+  width: 100%;
+  border: none;
+  font-family: Quicksand;
+  font-size: 16px;
+  color: #222222;
+  background-color: transparent; /* Make the background transparent */
+  -webkit-appearance: none; /* Remove default arrow on Safari */
+  -moz-appearance: none; /* Remove default arrow on Firefox */
+  appearance: none; /* Remove default arrow on other browsers */
+}
+
+/* Styles for the custom dropdown */
+.custom-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc; /* Set the color for the bottom line */
+  background-color: transparent; /* Make the background transparent */
+  padding-bottom: 5px;
+  font-size: 16px; /* Set the font size for the input text and dropdown */
+  outline: none; /* Remove the default focus outline */
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.custom-icon::after {
+  content: url("/assets/icons/arrow-down.svg"); /* Replace this URL with your actual image URL */
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transform: translateY(-50%);
+  width: 16px; /* Set the width of the dropdown icon */
+  height: 16px; /* Set the height of the dropdown icon */
+  pointer-events: none; /* Prevent the icon from being clickable */
+}
+/*Radio buttons*/
+#radio-exp {
+  display: flex;
+}
+
+/* Hide the default radio buttons */
+.radio-btn input[type="radio"] {
+  display: none;
+}
+
+/* Style the container for each radio button and label */
+.radio-btn .radio-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  margin-bottom: 16px; /* Add gap between radio buttons */
+}
+
+.custom-radio {
+  margin-right: 24px;
+}
+/* Style the custom radio labels with background images for both on and off states */
+.radio-btn .custom-radio {
+  display: flex;
+  align-items: center;
+  padding-left: 30px; /* Add space for the custom image */
+  position: relative;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.radio-btn .custom-radio::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px; /* Set the width of the custom image */
+  height: 20px; /* Set the height of the custom image */
+  background-image: url("./assets/icons/radio-button-off.svg"); /* Add the path to your off image */
+  background-size: cover;
+}
+
+/* Style the custom radio labels when selected (on) */
+.radio-btn input[type="radio"]:checked + .custom-radio::before {
+  /* Add styles for the selected (on) state */
+  background-image: url("./assets/icons/radio-button-on.svg"); /* Add the path to your on image */
+}
+
+.p-others {
+  margin-top: 16px;
+}
+
+.notice-exp {
+  margin-bottom: 16px;
+}
+
+.radio-cards-fresher .details,
+.radio-cards-experienced .details {
+  width: 50%;
+}
+
+.input-with-icon {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+#notice-end-date {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  padding-right: 25px; /* Space for the icon */
+}
+#notice-end-date:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: transparent; /* Set the border color to transparent */
+}
+#calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.calendar-icon img {
+  height: 16px;
+  width: 16px;
+}
+/*Review Section*/
+.response-js {
+  font-size: 16px;
+  color: #222222;
+  text-transform: capitalize;
+}
+
+.no-cap {
+  text-transform: none;
+}
+
+.review-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px;
+}
+
+.edit-icon {
+  display: flex;
+  align-items: center;
+}
+
+.edit-icon .-img {
+  margin-right: 8px;
+  height: 18px;
+  width: 18px;
+}
+
+.edit-label {
+  font-size: 14px;
+  color: #1f7a54; /* Color code #1F7A54 */
+}
+#reviewSection .details .upload-img img {
+  color: #222222; /* Color code #222222 */
+}
+
+#reviewSection .details .upload-label {
+  color: #222222; /* Color code #222222 */
+}
+
+.black-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding-left: 30px; /* Add space for the custom image */
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.black-checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px; /* Set the width of the custom image */
+  height: 20px; /* Set the height of the custom image */
+  background-image: url("./assets/walk-in-asserts/check_box_outline_blank_black_24dp.svg"); /* Add the path to your off image */
+  background-size: cover;
+}
+
+/* Style the custom checkbox labels when selected (on) */
+input[type="checkbox"]:checked + .black-checkbox::before {
+  /* Add styles for the selected (on) state */
+  background-image: url("./assets/walk-in-asserts/check_box_black_24dp.svg"); /* Add the path to your on image */
+}
+/*footer*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 41px;
+}

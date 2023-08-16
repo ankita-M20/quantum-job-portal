@@ -1,0 +1,286 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(./assets/Quicksand-font-1/Quicksand-VariableFont_wght.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Bold.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Light.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Medium.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Regular.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-SemiBold.ttf);
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #eeeeee;
+    font-family: Quicksand;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+  }
+
+  
+  p {
+    font-size: 12px;
+    font-weight: normal;
+    font-family: Quicksand;
+    color: #666666;
+    height: 15px;
+    margin: 0px;
+  }
+
+  @font-face {
+    font-family: Quicksand;
+    src: url(./assets/Quicksand-font-1/Quicksand-VariableFont_wght.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Bold.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Light.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Medium.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-Regular.ttf);
+    src: url(./assets/Quicksand-font-1/static/Quicksand-SemiBold.ttf);
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #eeeeee;
+    font-family: Quicksand;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+  }
+
+  
+  p {
+    font-size: 12px;
+    font-weight: normal;
+    font-family: Quicksand;
+    color: #666666;
+    height: 15px;
+    margin: 0px;
+  }
+
+  /*-----------------------------------Header-------------------------------------------*/
+
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Add some padding to the header if needed */
+    background-color: #1F2834;
+    overflow: hidden;
+    box-shadow: 0px 2px #41b3d8;
+    padding: 10px 15px;
+    justify-content: space-between;
+    margin-bottom: 2px;
+  }
+
+  .logo {
+    max-width: 100px;
+    height: 36px;
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-right: 20px; 
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 40px;
+    top: 10px;
+  }
+
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1px;
+    border: 2px solid #3fd28b;
+    background: #3C4E62;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 16px;
+  }
+
+  /*------------------------------Main----------------------------------*/
+
+  .cards {
+    margin: 24px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px #0000003D;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 76px;
+  }
+
+  .card {
+    width: 100px; /* Set the card width */
+    height: 50px; /* Set the card height */
+   /* background-color: lightgray; /* Card background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50%; /* Move the div 50% outside from the top */
+    left: 50%;
+    margin-bottom: 8px;
+}
+.cards-sub{
+  padding: 16px;
+}
+
+.card-tail {
+  margin-bottom: 8px;
+}
+
+.confirmation-screen {
+  width: 100px; /* Set the desired width and height for the circle */
+  height: 100px;
+  background-color: #18BE2E; /* Green background color */
+  border-radius: 50%; /* Make the div circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -90%; /* Move the div 50% outside from the top */
+  transform: translate(-50%, 0);
+  z-index: 2; /* Ensure the confirmation screen is above the card */
+  box-shadow: 0px 4px 6px #00000029;
+}
+
+.confirmation-screen img {
+width: 76px;
+height: 76px;
+}
+
+/*-------------------------Walk-in Portal- card - head------------------------------------------*/
+
+.walk-in-apply {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.walk-in-title {
+    font-family: Quicksand;
+    font-weight: normal;
+    color: #222222;
+    text-align: left;
+    letter-spacing: 0px;
+    font-size: 18px;
+  }
+
+  .walk-in-details {
+    margin-bottom: 16px;
+  }
+
+  .walk-in-info > div,
+  .walk-in-info {
+    margin-top: 8px;
+    font-size: 14px;
+    font-family: Quicksand, sans-serif;
+    color: #222222;
+}
+
+sup {
+  vertical-align: top;
+  font-size: 8px;
+  font-family: Quicksand;
+}
+
+.card-head {
+  border-bottom: 1px solid #d3d3d3;
+  margin-bottom: 16px; /* Add padding to separate content from border */
+}
+
+
+.view-more-btn {
+    background: #3FD28B; /* Background color */
+    box-shadow: 0px 3px 5px #0000003D;
+    border-radius: 2px;
+    opacity: 1;
+    font-family: Quicksand, sans-serif;
+    font-weight: medium;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #25313F;
+    padding: 10px 20px; /* Padding: 10px top and bottom, 20px left and right */
+    cursor: pointer; /* Show pointer cursor on hover */
+    border: none; /* Remove default button border */
+    text-transform: uppercase; 
+    padding: 5px 18px; 
+    margin-bottom: 8px;
+  }
+  
+  .view-more-btn:hover {
+    background-color: #37ad6a; /* Darker background color on hover */
+  }
+  
+  .view-more {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 24px;
+  }
+
+/*------------MEDIA-------------------------*/
+
+@media only screen and (max-width: 375px) {
+  header {
+      padding: 8px 15px; /* Adjust padding */
+  }
+
+  .logo {
+      max-width: 80px; /* Adjust logo size */
+      height: 36px; /* Adjust logo height */
+  }
+
+  .profile-icon {
+      width: 40px; /* Adjust profile icon size */
+      height: 40px; /* Adjust profile icon height */
+      font-size: 16px; /* Adjust font size */
+  }
+
+  .job-icons {
+    margin-bottom: 8px;
+  }
+
+  .job-opportnity,
+  .job-roles,
+  .avail-roles,
+  .inst-designer,
+  .soft-eng,
+  .qa-eng,
+  .intern-opportunity {
+      display: block;
+      font-size: 14px; /* Adjust font size */
+  }
+
+  .cards {
+      width: 343px; /* Set card width */
+      margin: 24px auto; /* Center align card */
+      margin-top: 76px;
+  }
+  
+  .cards-sub {
+      width: 300px; /* Set content width */
+      margin: 0 auto; /* Center align content */
+  }
+
+  .walk-in-title{
+    text-align: center;
+  }
+  
+}
