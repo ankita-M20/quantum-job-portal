@@ -20,29 +20,21 @@ prevButton.style.display = "none"; // Hide 'Prev' button for the first section
 // Handle 'Next' button click
 
 function nextSection() {
-  console.log("check");
   if (currentSectionIndex < totalSections) {
-    console.log("first");
     if (currentSectionIndex === 0) {
-      console.log("sec");
       submitPersonalDetailsForm(); // Store Personal Details input
     } else if (currentSectionIndex === 1) {
-      console.log("third");
       storeQualificationDetails(); // Store Qualification Details input
     }
-    console.log("turu", currentSectionIndex, totalSections - 1);
+
     if (currentSectionIndex === totalSections - 2) {
       populateReviewSection(); // Populate review section with stored details
     }
 
-    console.log("fourth", currentSectionIndex, totalSections);
     if (currentSectionIndex < totalSections - 1) {
       console.log("ffifthirst");
       navigateTo(currentSectionIndex + 1);
     }
-
-    //updateFooterButtons();
-    // updateSectionVisibility();
   }
   console.log(currentSectionIndex, totalSections);
 }
@@ -143,48 +135,10 @@ function replaceProfileImage(event) {
 // Define a global object to store the responses locally
 const responses = {};
 
-function saveAndNavigate() {
-  // Save responses from personal details section
-  responses.firstName = document.getElementById("firstName").value;
-  responses.lastName = document.getElementById("lastName").value;
-  responses.email = document.getElementById("email").value;
-  responses.countryCode = document.getElementById("country-code").value;
-  responses.phoneNumber = document.getElementById("phone-number").value;
-  responses.portfolio = document.getElementById("portfolio").value;
-  responses.referral = document.getElementById("refferal").value;
-  responses.jobRoles = getSelectedJobRoles();
-
-  const resumeFileInput = document.getElementById("resume");
-  if (resumeFileInput.files.length > 0) {
-    responses.resumeFileName = resumeFileInput.files[0].name;
-    responses.resumeFile = resumeFileInput.files[0];
-  }
-
-  // Save uploaded profile picture
-  const profileImageInput = document.getElementById("profile-image");
-  if (profileImageInput.files.length > 0) {
-    responses.profileImageFileName = profileImageInput.files[0].name;
-  }
-
-  // Navigate to the next section
-  nextSection();
-}
-
-function getSelectedJobRoles() {
-  const selectedRoles = [];
-  const checkboxes = document.querySelectorAll('input[name="role"]:checked');
-
-  checkboxes.forEach((checkbox) => {
-    selectedRoles.push(checkbox.value);
-  });
-
-  return selectedRoles;
-}
-
 /*--------------------------------Qualifications---------------------------*/
 function setupAccordion() {
   var acc = document.querySelectorAll(".accordion"); // Use querySelectorAll to select all elements with class "accordion"
-  var panels = document.querySelectorAll(".panel");
+  // var panels = document.querySelectorAll(".panel");
 
   for (var i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
