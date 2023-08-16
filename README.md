@@ -6,4 +6,4 @@ email: user@gmail.com <br>
 password: User@123
 
 
-## Create Account Section is created but not functional yet
+Create Account Section is created but not functional yet
